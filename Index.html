@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Index</title>
+    <style>
+        body {
+            width: 1440px;
+            height:2000px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0px;
+            padding-top: 0px;
+            background-image:url('https://wallpaperaccess.com/full/121188.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: scroll;
+        }
+        ul {
+            list-style-type: none;
+            width: 100%;
+            float:left;
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+            background-color: #333;
+        }
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+        p a {
+          color: red;
+          }
+
+        p a:hover {
+            color:lime;
+
+        }
+
+        p a:active {
+            color:black;
+        }
+        
+        img {
+            width: 100%;
+        }
+
+        hr {
+            display:block;
+            height:1.5px;
+            color:black;
+            background-color:black;
+            border-color:black;
+        }
+
+        h5 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+
+        #fixed {
+            position:fixed;
+            float:left;
+            width: 1440px;
+            padding-top: 0px;
+            margin-top: 0px;
+        }
+
+        #header {
+            background-image:url('https://s10.gifyu.com/images/Untitled-design09e8e86cf53e1616.gif');
+            padding-top: 0px;
+            margin-top: 0px;
+            background-position: center;
+            background-size: 1440px 200px;
+            background-repeat: no-repeat;
+        }
+
+        #header h1 {
+            margin: 0px;
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 25px;
+            padding-left: 500px;
+            color: rgb(0, 132, 255);
+            font-size: 75px;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-shadow: 2px 1px rgb(233, 255, 155);
+        }
+
+        #content {
+            padding-top: 200px;
+        }
+
+        #content-main {
+            width: 890px;
+            height: 776px;
+            background-color: rgba(255, 255, 255, 0.8);
+            float: left;
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-top: 50px;
+            border-style:solid;
+            border-width:2.5px;
+            border-color: rgba(0,0,0,0.2);
+            text-align:justify;
+        }
+
+        #content-news {
+            font-size: 18.5px;
+            padding-left:25px;
+            padding-right:25px;
+        }
+
+        #second-content-main {
+            width: 420px;
+            height: 776px;
+            background-color: rgba(255, 255, 255, 0.8);
+            float: left;
+            margin-left: 50px;
+            margin-right: 22px;
+            margin-top: 50px;
+            border-style:solid;
+            border-width:2.5px;
+            border-color: rgba(0,0,0,0.2);
+            text-align:justify;
+        }
+
+        #second-content-news {
+            font-size: 15.5px;
+            padding-left:25px;
+            padding-right:25px;
+        }
+
+        #third-content-main {
+            width: 420px;
+            height: 776px;
+            background-color: rgba(255, 255, 255, 0.8);
+            float: left;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 50px;
+            border-style:solid;
+            border-width:2.5px;
+            border-color: rgba(0,0,0,0.2);
+            text-align:justify;
+        }
+
+        #third-content-news {
+            font-size: 18px;
+            padding-left:25px;
+            padding-right:25px;
+        }
+
+        #content-side {
+            width: 270px;
+            height: 500px;
+            padding: 15px;
+            background-color: rgba(214, 214, 214, 0.93);
+            float: right;
+            margin-top: 50px;
+            margin-right: 50px;
+            border-style:solid;
+            border-width:1px;
+            border-color: rgba(0,0,0,0.2);
+            overflow: scroll;
+            text-align: justify;
+        }
+
+        #side-content-news {
+            font-size: 19px;
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-top: 2px;
+            padding-bottom: 10px;
+        }
+
+        #second-content-side {
+            width: 270px;
+            height: 500px;
+            padding: 15px;
+            background-color: rgba(214, 214, 214, 0.93);
+            float: right;
+            margin-top: 50px;
+            margin-right: 50px;
+            border-style:solid;
+            border-width:1px;
+            border-color: rgba(0,0,0,0.2);
+            overflow: scroll;
+            text-align: justify;
+        }
+
+        #second-side-content-news {
+            font-size: 19px;
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-top: 2px;
+            padding-bottom: 10px;
+        }
+
+        #third-content-side {
+            width: 270px;
+            height: 417px;
+            padding: 15px;
+            background-color: rgba(214, 214, 214, 0.93);
+            float: right;
+            margin-top: 50px;
+            margin-right: 50px;
+            border-style:solid;
+            border-width:1px;
+            border-color: rgba(0,0,0,0.2);
+            overflow: scroll;
+            text-align: justify;
+        }  
+
+        #third-side-content-news {
+            font-size: 19px;
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-top: 2px;
+            padding-bottom: 10px;
+        }
+
+        #footer {
+            margin-bottom: 5px;
+            float: left;
+            text-align:center;
+            width: 100%;
+            text-shadow: 0.29px 0.29px yellow;
+        }
+
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="fixed">
+    <div id="header">
+        <h1>ANIME SENPAI</h1>
+    </div>
+    <div id="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Fantasy.html">Fantasy</a></li>
+            <li><a href="ScienceFiction.html">Science Fiction</a></li>
+            <li><a href="Isekai.html">Isekai</a></li>
+            <li><a href="Romance.html">Romance</a></li>
+            <li><a href="About.html">About the Author</a></li>
+        </ul>
+    </div>
+</div>
+    <div id="content">
+        <div id="content-main">
+            <h2 style="color:red;font-size:30px; margin-top:3px; margin-bottom:3px"><b>Dr. Stone's Journey Through the Wonders of Science</b></h2>
+            <img src="https://animemanganews.com/wp-content/uploads/2021/09/1648589-2.jpg" alt="Dr. Stone">
+            <p id="content-news">Awakened into a world where humanity has been petrified, scientific genius Senku and his brawny friend Taiju use their skills to rebuild civilization. ... This anime tells the story of how some people from the Pre-Petrification World try to rebuild civilization in the Petrification Age, the Stone World.<a href="https://www.animenewsnetwork.com/news/2021-10-27/lisa-new-demon-slayer-song-tops-utada-last-evangelion-song-in-1st-week-downloads/.178871">Read More</a> </p>
+        </div>
+        <div id="content-side">
+            <h3><b>Romance</b></h3>
+            <hr/>
+            <p style="color:red;font-size:25px; margin-top:3px; margin-bottom:3px"><b>Kaguya-sama Love is War</b></p>
+            <img src="https://cdn.vox-cdn.com/thumbor/BuN60LgjQCEJCX05Lx1BDujeKf4=/0x0:1419x759/1200x800/filters:focal(590x285:816x511)/cdn.vox-cdn.com/uploads/chorus_image/image/62993985/kaguya_sama.0.jpg" height="150" alt="Yugioh">
+            <p id="second-side-content-news">Kaguya-sama: Love is War started out as a manga with a specific premise: two high school geniuses, Shirogane and Kaguya, can't admit they're in love, so each tries to win a confession of affection from the other. This results in increasingly ridiculous mind games in which they end up outsmarting themselves.
+                <a href="https://www.polygon.com/comics/2019/2/4/18210433/kaguya-sama-love-is-war-manga#:~:text=Kaguya%2Dsama%3A%20Love%20is%20War%20started%20out%20as%20a%20manga,they%20end%20up%20outsmarting%20themselves.">Read More</a> </p>
+        </div>
+        <div id="second-content-side">
+            <h4><b>Fantasy</b></h4>
+            <hr/>
+            <p style="color:red;font-size:25px; margin-top:3px; margin-bottom:3px"><b>Demon Slayer</b></p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNQCRhb-TGZLRD0wacFcLN7tv4-_0bNuwYnaqTQ5jBobjb8nE0WLEF7I027W3pqGOxnqM&usqp=CAU" height="150" alt="Triangle Strategy">
+            <p id="side-content-news">Set in Taisho-era Japan, Demon Slayer's plot follows the epic saga of Tanjirou Kamado, a kind-hearted teen who, upon returning home one day, finds his entire 
+                family slaughtered by invading demons. Worst of all, he finds that his sister, Nezuko, has been turned into a bloodthirsty demon herself.
+                <a href="https://www.nme.com/en_asia/news/tv/demon-slayer-season-2-release-date-plot-details-how-to-watch-2915433#:~:text=Set%20in%20Taisho%2Dera%20Japan,into%20a%20bloodthirsty%20demon%20herself.">Read More</a> </p>
+        </div>
+        <div id="second-content-main">
+            <p style="color:red;font-size:20px; margin-top:3px; margin-bottom:10px; text-align:center;"><b>Tensur Shittara Slime Datta Ken</b></p>
+            <img src="https://www.monstersandcritics.com/wp-content/uploads/2021/09/That-Time-I-Got-Reincarnated-As-A-Slime-movie-release-date-in-Fall-2022-TenSura-Tensei-Shitara-Slime-Datta-Ken-movie.jpg" height="300" alt="Slime">
+            <p id="second-content-news">Satoru Mikami is an ordinary 37-year-old corporate worker living in Tokyo. He is almost content with his monotonous life, despite the fact that he doesn't have a girlfriend. During a casual encounter with his colleague, an assailant pops out of nowhere and stabs him. While succumbing to his injuries, a 
+                mysterious voice echoes in his mind and recites a series of commands which he could not make sense of. He awakens in a cave in an unfamiliar fantasy world to discover that he has been reincarnated as a slime, possessing various skills formed from his final thoughts before death. While exploring the cave, gaining new skills along the way with the aid of a great sage residing in his mind, the slime comes across and befriends an ancient dragon named Veldora, who was sealed in the cave centuries ago.
+                The slime, Rimuru Tempest, helps Veldora to find a way to break his seal by swallowing him and analyzing it from both sides. 
+                <a href="https://en.wikipedia.org/wiki/That_Time_I_Got_Reincarnated_as_a_Slime_(season_1)">Read More</a>
+            </p>
+        </div>
+        <div id="third-content-main">
+            <p style="color:red;font-size:20px; margin-top:3px; margin-bottom:10px; text-align:center;"><b>Attack On Titan, The Iconic Anime</b></p>
+            <img src="https://d.newsweek.com/en/full/1702195/attack-titan-final-season-4-visual.jpg?w=790&f=0eb6a783944916223ecc40e6a4aa5ed4" height="300" alt="Titan">
+            <p id="third-content-news">The plot of Attack on Titan centers on a civilization inside three walls, the last location where humans still live. Over one hundred years ago, humanity was driven to the brink of extinction after the emergence of humanoid giants called Titans, who attack and eat humans on sight. The last remnants of humanity retreated behind three concentric walls and enjoyed nearly a century of peace. To combat Titans, the country's military employs Vertical Maneuvering Equipment, a set of waist-mounted 
+                grappling hooks and gas-powered propulsion enabling immense mobility in three dimensions.
+            </div>
+        <div id="third-content-side">
+            <h5><b>Isekai</b></h5>
+                <hr/>
+                <p style="color:red;font-size:20px; margin-top:3px; margin-bottom:3px"><b>Rising of the Shield Hero</b></p>
+                <img src="https://images-na.ssl-images-amazon.com/images/I/811iet4L6DL._RI_.jpg" height="150" alt="Shield">
+                <p id="third-side-content-news">TThe Rising of the Shield Hero follows Naofumi Iwatani, a 20 year-old university student who was whisked away to a fantasy game-like realm of monsters and magic after discovering a book about Four Heroes. ... Now the cynical Iwatani must somehow survive in a new and dangerous world that despises him.
+                    <a href="https://otakumode.com/otapedia/anime/Winter-2019-Anime/The-Rising-of-the-Shield-Hero#:~:text=The%20Rising%20of%20the%20Shield%20Hero%20follows%20Naofumi%20Iwatani%2C%20a,a%20book%20about%20Four%20Heroes.&text=Now%20the%20cynical%20Iwatani%20must,dangerous%20world%20that%20despises%20him.">Read More</a> </p>
+        </div>
+    </div>
+    <div id="footer">
+        <hr/>
+        <p style="color: rgb(218, 218, 218)">All material Copyright 2021 Anime Senpai Website. All rights reserved. <br/>
+     by James Matthew, Credits to the Owners of the pictures</p>
+    </div>
+</body>
+</html>
