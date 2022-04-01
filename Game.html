@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Q3_Project_Pinatubo_Group2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="/assets/dcode.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&family=Fredoka:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Puritan&display=swap" rel="stylesheet">
+
+
+    <style>
+        body {
+            margin: 0px;
+            width: 1440px;
+            height: auto;
+            padding-top: 5px;
+            background-color: #0f4c5c;
+            font-family: 'Kosugi Maru', sans-serif;
+            color: rgb(171, 255, 168);
+        }
+
+        header {
+            align-content: center;
+        }
+
+        h1 {
+            float: left;
+            font-size: 70px;
+            margin-left: 5px;
+            color: #e7c080;
+            font-family: 'Smokum', cursive;
+            text-shadow: 2px 2px #a33178;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 55px;
+            margin-bottom: 65px;
+        }
+
+        #time {
+            background-color: #9a031e;
+            width: auto;
+            height: auto;
+            float: left;
+            margin-left: 50px;
+            margin-top: 15px;
+            border-radius: 15px;
+        }
+
+        header p {
+            font-size: 40px;
+        }
+
+        div .container,
+        .row {
+            height: 100%;
+        }
+
+        header img {
+            float: left;
+            margin-top: 5px;
+            margin-left: 90px;
+        }
+
+        .founded {
+            padding-top: 22px;
+            font-size: 22px;
+            margin-top: 0px;
+            margin-left: 40px;
+            float: left;
+        }
+
+        .foundedimg {
+            margin-top: 0px;
+            float: left;
+        }
+
+        #img img {
+            margin-top: 5px;
+            margin-left: 25px;
+            width: 96%;
+            border: 5px solid #e36414;
+        }
+
+        #demo {
+            margin-bottom: 2px;
+        }
+
+        #Nextlevel {
+            margin-top: 100px;
+            width: 900px;
+            height: 650px;
+            margin-left: 250px;
+            background-color: peachpuff;
+            border-radius: 100px;
+            border: 5px solid #e36414;
+            text-align: center;
+            align-content: center;
+        }
+
+        #cover {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: #0f3c5c;
+            display: none;
+        }
+
+        #Nextlevel h3 {
+            color: #fb8b24;
+            text-shadow: 2px 2px #5f0f40;
+            font-size: 100px;
+        }
+
+        #Nextlevel button {
+            margin-top: 15px;
+            border-radius: 100px;
+            font-size: 50px;
+            width: 400px;
+            height: 100px;
+            margin-right: 50px;
+            margin-left: 30px;
+        }
+
+        #resume {
+            align-self: center;
+            margin-left: 200px;
+            display: none;
+        }
+
+        #pause {
+            width: 80px;
+            height: 80px;
+            border-radius: 100px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Eo_circle_red_pause.svg/2048px-Eo_circle_red_pause.svg.png');
+            background-size: cover;
+            float: left;
+            margin-top: 10px;
+            margin-left: 30px;
+            margin-right: 0px;
+        }
+
+        #Tally {
+            position: fixed;
+            display: none;
+            width: 100%;
+            height: 100%;
+            background-color: #0f3c5c;
+        }
+
+        #Sheet {
+            margin-top: 100px;
+            width: 900px;
+            height: 650px;
+            margin-left: 250px;
+            background-color: peachpuff;
+            border-radius: 100px;
+            border: 5px solid #e36414;
+            text-align: center;
+            align-content: center;
+        }
+
+        #Sheet h4 {
+            color: #fb8b24;
+            text-shadow: 2px 2px #5f0f40;
+            font-size: 100px;
+        }
+
+        #Sheet p {
+            color: #000000;
+            text-shadow: 2px 2px #ffffff;
+            font-size: 50px;
+        }
+
+        #coords {
+            margin-left: 25px;
+            border: 3px solid #e36414;
+            width: 100px;
+        }
+    </style>
+    <script>
+        var minutes = 2;
+        var page = 0;
+        var seconds = 30;
+        var scorex = 0;
+        var scorey = 0;
+        var scorez = 0;
+        var guitar = 0;
+        var globe = 0;
+        var alarm = 0;
+        var soccer = 0;
+        var headphones = 0;
+        var mug = 0;
+        var rubshoes = 0;
+        var petbowl = 0;
+        var clock = 0;
+        var stuffed = 0;
+        var calendar = 0;
+        var sandals = 0;
+        var pillow = 0;
+        var pc = 0;
+        var bente = 0;
+        var sign = 0;
+        var dia = 0;
+        var broom = 0;
+        var letra = 0;
+        var motor = 0;
+        var trash = 0;
+        var pasuedm = 0;
+        var pauseds = 0;
+        var tot = 0;
+
+        const interval = setInterval(function () {
+
+            document.getElementById("demo").innerHTML = minutes + "m " + seconds + "s ";
+
+            seconds = seconds - 1;
+
+            if (seconds < 0) {
+
+                minutes = minutes - 1;
+                seconds = 59;
+            }
+
+            if (minutes < 0) {
+                minutes = 2;
+                seconds = 30;
+                if (page != 2) {
+                    document.getElementById('next').innerHTML = "Time is up! Continue?";
+                    document.getElementById('nextbut').innerHTML = "Next Level";
+                    document.getElementById('cover').style.display = "block";
+
+                }
+
+                else {
+                    document.getElementById('next').innerHTML = "Game Over. See Results?"
+                    document.getElementById('nextbut').innerHTML = "See results";
+                    document.getElementById('cover').style.display = "block";
+                }
+            }
+
+            if (page == 0) {
+                if (scorex == 7) {
+                    minutes = 2;
+                    seconds = 30;
+                }
+            }
+
+            if (page == 1) {
+                if (scorey == 7) {
+                    minutes = 2;
+                    seconds = 30;
+                }
+            }
+
+            if (page == 2) {
+                if (scorez == 7) {
+                    minutes = 2;
+                    seconds = 30;
+                }
+            }
+
+        }, 1000);
+
+        function showCoords(event) {
+            var x = event.clientX;
+            var y = event.clientY;
+            var msg = "(" + x + ", " + y + ")";
+            document.getElementById('myCoords').innerHTML = msg;
+        }
+        function clearCoords(event) {
+            document.getElementById('myCoords').innerHTML = "(, )";
+        }
+        function checkImage(event) {
+            var x = event.clientX;
+            var y = event.clientY;
+
+            if (page == 0) {
+                if (x >= 609 && x <= 672 && y >= 508 && y <= 583) {
+                    if (guitar == 0) {
+                        alert("You found the guitar!");
+                        scorex++;
+                        guitar++;
+                        document.getElementById('found1img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+                else if (x >= 641 && x <= 654 && y >= 418 && y <= 532) {
+                    if (guitar == 0) {
+                        alert("You found the guitar!");
+                        scorex++;
+                        guitar++;
+                        document.getElementById('found1img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+                else if (x >= 1099 && x <= 1129 && y >= 473 && y <= 478) {
+                    if (globe == 0) {
+                        alert("You found the globe!");
+                        scorex++;
+                        globe++;
+                        document.getElementById('found2img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+                else if (x >= 1096 && x <= 1139 && y >= 437 && y <= 466) {
+                    if (globe == 0) {
+                        alert("You found the globe!");
+                        scorex++;
+                        globe++;
+                        document.getElementById('found2img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+                else if (x >= 887 && x <= 906 && y >= 434 && y <= 449) {
+                    if (alarm == 0) {
+                        alert("You found the alarm clock!");
+                        scorex++;
+                        alarm++;
+                        document.getElementById('found7img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+                else if (x >= 134 && x <= 187 && y >= 598 && y <= 622) {
+                    if (soccer == 0) {
+                        alert("You found the soccer ball!");
+                        scorex++;
+                        soccer++;
+                        document.getElementById('found3img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+                else if (x >= 185 && x <= 202 && y >= 611 && y <= 641) {
+                    if (soccer == 0) {
+                        alert("You found the soccer ball!");
+                        scorex++;
+                        soccer++;
+                        document.getElementById('found3img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+                else if (x >= 193 && x <= 211 && y >= 627 && y <= 655) {
+                    if (soccer == 0) {
+                        alert("You found the soccer ball!");
+                        scorex++;
+                        soccer++;
+                        document.getElementById('found3img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+                else if (x >= 948 && x <= 993 && y >= 535 && y <= 542) {
+                    if (headphones == 0) {
+                        alert("You found the headphones!");
+                        scorex++;
+                        headphones++;
+                        document.getElementById('found5img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+                else if (x >= 848 && x <= 862 && y >= 435 && y <= 448) {
+                    if (mug == 0) {
+                        alert("You found the mug!");
+                        scorex++;
+                        mug++;
+                        document.getElementById('found6img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+                else if (x >= 844 && x <= 849 && y >= 436 && y <= 446) {
+                    if (mug == 0) {
+                        alert("You found the mug!");
+                        scorex++;
+                        mug++;
+                        document.getElementById('found6img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+                else if (x >= 1232 && x <= 1295 && y >= 601 && y <= 623) {
+                    if (rubshoes == 0) {
+                        alert("You found the rubber shoes!");
+                        scorex++;
+                        rubshoes++;
+                        document.getElementById('found4img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+                else {
+                    alert("You found nothing.");
+                    seconds = seconds - 10;
+                }
+
+                if (scorex == 7) {
+                    document.getElementById('next').innerHTML = "Level Complete! Continue?";
+                    document.getElementById('cover').style.display = "block";
+                }
+            }
+
+            else if (page == 1) {
+                if (x >= 1289 && x <= 1340 && y >= 640 && y <= 656) {
+                    if (petbowl == 0) {
+                        alert("You found the petbowl!");
+                        scorey++;
+                        petbowl++;
+                        document.getElementById('found1img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+
+                else if (x >= 1357 && x <= 1373 && y >= 314 && y <= 351) {
+                    if (clock == 0) {
+                        alert("You found the clock!");
+                        scorey++;
+                        clock++;
+                        document.getElementById('found2img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+                else if (x >= 589 && x <= 647 && y >= 480 && y <= 521) {
+                    if (stuffed == 0) {
+                        alert("You found the plush pillow!");
+                        scorey++;
+                        stuffed++;
+                        document.getElementById('found3img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+                else if (x >= 36 && x <= 127 && y >= 329 && y <= 435) {
+                    if (calendar == 0) {
+                        alert("You found the Cat calendar!");
+                        scorey++;
+                        calendar++;
+                        document.getElementById('found4img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+                else if (x >= 1172 && x <= 1205 && y >= 618 && y <= 628) {
+                    if (sandals == 0) {
+                        alert("You found the sandals!");
+                        scorey++;
+                        sandals++;
+                        document.getElementById('found5img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+                else if (x >= 1220 && x <= 1250 && y >= 611 && y <= 631) {
+                    if (sandals == 0) {
+                        alert("You found the sandals!");
+                        scorey++;
+                        sandals++;
+                        document.getElementById('found5img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+                else if (x >= 1212 && x <= 1118 && y >= 578 && y <= 597) {
+                    if (pillow == 0) {
+                        alert("You found the pillow!");
+                        scorey++;
+                        pillow++;
+                        document.getElementById('found6img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+                else if (x >= 449 && x <= 526 && y >= 542 && y <= 582) {
+                    if (pillow == 0) {
+                        alert("You found the pillow!");
+                        scorey++;
+                        pillow++;
+                        document.getElementById('found6img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+                else if (x >= 604 && x <= 681 && y >= 409 && y <= 448) {
+                    if (pc == 0) {
+                        alert("You found the Desktop Computer!");
+                        scorey++;
+                        pc++;
+                        document.getElementById('found7img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+                else {
+                    alert("You found nothing.");
+                    seconds = seconds - 10;
+                }
+
+                if (scorey == 7) {
+                    document.getElementById('next').innerHTML = "Level Complete! Continue?";
+                    document.getElementById('cover').style.display = "block";
+                }
+            }
+
+            else if (page == 2) {
+                if (x >= 338 && x <= 359 && y >= 333 && y <= 352) {
+                    if (bente == 0) {
+                        alert("You found the No. 24!");
+                        scorez++;
+                        bente++;
+                        document.getElementById('found1img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+
+                else if (x >= 1011 && x <= 1016 && y >= 390 && y <= 512) {
+                    if (sign == 0) {
+                        alert("You found the Car Sign!");
+                        scorez++;
+                        sign++;
+                        document.getElementById('found2img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+                else if (x >= 993 && x <= 1031 && y >= 357 && y <= 387) {
+                    if (sign == 0) {
+                        alert("You found the Car Sign!");
+                        scorez++;
+                        sign++;
+                        document.getElementById('found2img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+                else if (x >= 795 && x <= 875 && y >= 509 && y <= 555) {
+                    if (dia == 0) {
+                        alert("You found the Diamond!");
+                        scorez++;
+                        dia++;
+                        document.getElementById('found3img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+                else if (x >= 401 && x <= 414 && y >= 500 && y <= 526) {
+                    if (broom == 0) {
+                        alert("You found the Broom!");
+                        scorez++;
+                        broom++;
+                        document.getElementById('found4img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+                else if (x >= 409 && x <= 421 && y >= 450 && y <= 498) {
+                    if (broom == 0) {
+                        alert("You found the Broom!");
+                        scorez++;
+                        broom++;
+                        document.getElementById('found4img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+                else if (x >= 334 && x <= 343 && y >= 470 && y <= 474) {
+                    if (letra == 0) {
+                        alert("You found the Letter C!");
+                        scorez++;
+                        letra++;
+                        document.getElementById('found5img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+                else if (x >= 449 && x <= 505 && y >= 454 && y <= 518) {
+                    if (motor == 0) {
+                        alert("You found the Motorbike!");
+                        scorez++;
+                        motor++;
+                        document.getElementById('found6img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+                else if (x >= 359 && x <= 383 && y >= 506 && y <= 527) {
+                    if (trash == 0) {
+                        alert("You found the trash bin!");
+                        scorez++;
+                        trash++;
+                        document.getElementById('found7img').src = "https://www.seekpng.com/png/full/25-258456_check-mark-checkmark-clipart-free-to-use-clip.png";
+                    }
+                    else {
+                        alert('Already found');
+                    }
+                }
+                else {
+                    alert("You found nothing.");
+                    seconds = seconds - 10;
+                }
+
+                if (scorez == 7) {
+                    document.getElementById('next').innerHTML = "Game Over."
+                    document.getElementById('nextbut').innerHTML = "See results";
+                    document.getElementById('cover').style.display = "block";
+                }
+            }
+
+
+        }
+
+        function Next() {
+
+            page++;
+
+            if (page == 1) {
+                minutes = 2;
+                seconds = 30;
+                document.getElementById('Thepic').src = "https://wallpaperaccess.com/full/2713226.png";
+                document.getElementById('found1img').src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/1200px-Orange_question_mark.svg.png";
+                document.getElementById('found2img').src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/1200px-Orange_question_mark.svg.png";
+                document.getElementById('found3img').src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/1200px-Orange_question_mark.svg.png";
+                document.getElementById('found4img').src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/1200px-Orange_question_mark.svg.png";
+                document.getElementById('found5img').src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/1200px-Orange_question_mark.svg.png";
+                document.getElementById('found6img').src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/1200px-Orange_question_mark.svg.png";
+                document.getElementById('found7img').src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/1200px-Orange_question_mark.svg.png";
+                document.getElementById('found1').innerHTML = "Petbowl";
+                document.getElementById('found2').innerHTML = "Clock";
+                document.getElementById('found3').innerHTML = "Plushy";
+                document.getElementById('found4').innerHTML = "Calendar";
+                document.getElementById('found5').innerHTML = "Sandals";
+                document.getElementById('found6').innerHTML = "Pillow";
+                document.getElementById('found7').innerHTML = "Desktop";
+
+            }
+
+            else if (page == 2) {
+                minutes = 2;
+                seconds = 30;
+                document.getElementById('Thepic').src = "https://wallpaper.dog/large/10697383.jpg";
+                document.getElementById('found1img').src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/1200px-Orange_question_mark.svg.png";
+                document.getElementById('found2img').src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/1200px-Orange_question_mark.svg.png";
+                document.getElementById('found3img').src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/1200px-Orange_question_mark.svg.png";
+                document.getElementById('found4img').src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/1200px-Orange_question_mark.svg.png";
+                document.getElementById('found5img').src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/1200px-Orange_question_mark.svg.png";
+                document.getElementById('found6img').src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/1200px-Orange_question_mark.svg.png";
+                document.getElementById('found7img').src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/1200px-Orange_question_mark.svg.png";
+                document.getElementById('found1').innerHTML = "N0. 24";
+                document.getElementById('found2').innerHTML = "Car Sign";
+                document.getElementById('found3').innerHTML = "Diamond";
+                document.getElementById('found4').innerHTML = "Broom";
+                document.getElementById('found5').innerHTML = "Letter C";
+                document.getElementById('found6').innerHTML = "MotorBike";
+                document.getElementById('found7').innerHTML = "Trash Bin";
+            }
+
+            else if (page == 3) {
+                minutes = 100;
+                seconds = 30;
+                tot = scorex + scorey + scorez;
+                document.getElementById('L1').innerHTML += scorex;
+                document.getElementById('L2').innerHTML += scorey;
+                document.getElementById('L3').innerHTML += scorez;
+                document.getElementById('L4').innerHTML += tot;
+
+                if (tot >= 18 && tot <= 21) {
+                    document.getElementById('L5').innerHTML += "S tier";
+                }
+                else if (tot >= 14 && tot <= 17) {
+                    document.getElementById('L5').innerHTML += "A tier";
+                }
+                else if (tot >= 10 && tot <= 13) {
+                    document.getElementById('L5').innerHTML += "B tier";
+                }
+                else if (tot >= 6 && tot <= 9) {
+                    document.getElementById('L5').innerHTML += "C tier";
+                }
+                else if (tot >= 2 && tot <= 5) {
+                    document.getElementById('L5').innerHTML += "D tier";
+                }
+                else if (tot >= 0 && tot <= 1) {
+                    document.getElementById('L5').innerHTML += "F tier";
+                }
+                document.getElementById('Tally').style.display = "block";
+            }
+            document.getElementById('cover').style.display = "none";
+        }
+
+        function Restart() {
+
+            minutes = 2;
+            page = 0;
+            seconds = 30;
+            scorex = 0;
+            scorey = 0;
+            scorez = 0;
+            guitar = 0;
+            globe = 0;
+            alarm = 0;
+            soccer = 0;
+            headphones = 0;
+            mug = 0;
+            rubshoes = 0;
+            petbowl = 0;
+            clock = 0;
+            stuffed = 0;
+            calendar = 0;
+            sandals = 0;
+            pillow = 0;
+            pc = 0;
+            bente = 0;
+            sign = 0;
+            dia = 0;
+            broom = 0;
+            letra = 0;
+            motor = 0;
+            trash = 0;
+            document.getElementById('cover').style.display = "none";
+            document.getElementById('Thepic').src = "https://wallpaperaccess.com/full/2713229.jpg";
+            document.getElementById('found1img').src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/1200px-Orange_question_mark.svg.png";
+            document.getElementById('found2img').src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/1200px-Orange_question_mark.svg.png";
+            document.getElementById('found3img').src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/1200px-Orange_question_mark.svg.png";
+            document.getElementById('found4img').src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/1200px-Orange_question_mark.svg.png";
+            document.getElementById('found5img').src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/1200px-Orange_question_mark.svg.png";
+            document.getElementById('found6img').src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/1200px-Orange_question_mark.svg.png";
+            document.getElementById('found7img').src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/1200px-Orange_question_mark.svg.png";
+            document.getElementById('found1').innerHTML = "Guitar";
+            document.getElementById('found2').innerHTML = "Globe";
+            document.getElementById('found3').innerHTML = "Mug";
+            document.getElementById('found4').innerHTML = "Soccer Ball";
+            document.getElementById('found5').innerHTML = "Headphones";
+            document.getElementById('found6').innerHTML = "Rubber shoes";
+            document.getElementById('found7').innerHTML = "Alarm Clock";
+        }
+
+        function Pause() {
+            pausedm = minutes;
+            pauseds = seconds;
+            document.getElementById('next').innerHTML = "The Games is Paused"
+            document.getElementById('nextbut').style.display = "none";
+            document.getElementById('cover').style.display = "block";
+            document.getElementById('resume').style.display = "block";
+            minutes = 9;
+            seconds = 0;
+        }
+
+        function Resume() {
+            minutes = pausedm;
+            seconds = pauseds;
+            document.getElementById('next').innerHTML = "Level Complete! Continue?";
+            document.getElementById('cover').style.display = "none";
+            document.getElementById('nextbut').style.display = "block";
+            document.getElementById('nextbut').style.marginLeft = "237px";
+            document.getElementById('resume').style.display = "none";
+
+        }
+
+        function Menu() {
+           location.href = "Mainmenu.html";
+
+        }
+    </script>
+</head>
+
+
+<body>
+    <div id="cover">
+        <div id="Nextlevel">
+            <h3 id="next">"Level Complete! Continue?</h3>
+            <button id="nextbut" onclick="Next()">Next Level</button>
+            <button id="resume" onclick="Resume()" style="margin-left: 220px">Resume</button>
+            <button id="restart" onclick="Restart()">Restart</button>
+            <button onclick="Menu()">Main Menu</button>
+        </div>
+    </div>
+    <div id="Tally">
+        <div id="Sheet">
+            <h4>Score Breakdown</h4>
+            <p id="L1">Level 1: </p>
+            <p id="L2">Level 2: </p>
+            <p id="L3">Level 3: </p>
+            <p id="L4">Total: </p>
+            <p id="L5">Performance: </p>
+            <button onclick="Menu()">Main Menu</button>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <header>
+            <button id="pause" onclick="Pause()"></button>
+            <img src="https://clipart.world/wp-content/uploads/2020/10/Icon-Magnifying-Glass-clipart-transparent-1.png"
+                height="80" width="80" alt="title">
+            <h1><b>Anime Aiming: Hidden Treasures</b></h1>
+            <div id="time">
+                <p id="demo"></p>
+            </div>
+        </header>
+        <div id="img">
+            <img id="Thepic" src="https://wallpaperaccess.com/full/2713229.jpg" height="570" alt="PIC"
+                onmouseout="clearCoords(event)" onmousemove="showCoords(event)" onclick="checkImage(event)">
+        </div>
+        <div id="coords">
+            <p id="myCoords">&nbsp;</p>
+        </div>
+    </div>
+    <div id="Items">
+        <p class="founded" id="found1">Guitar</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/1200px-Orange_question_mark.svg.png"
+            width="70" height="70" alt="img" class="foundedimg" id="found1img">
+        <p class="founded" id="found2">Globe</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/1200px-Orange_question_mark.svg.png"
+            width="70" height="70" alt="img" class="foundedimg" id="found2img">
+        <p class="founded" id="found7">Alarm Clock</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/1200px-Orange_question_mark.svg.png"
+            width="70" height="70" alt="img" class="foundedimg" id="found7img">
+        <p class="founded" id="found3">Soccer Ball</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/1200px-Orange_question_mark.svg.png"
+            width="70" height="70" alt="img" class="foundedimg" id="found3img">
+        <p class="founded" id="found4">Rubber Shoes</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/1200px-Orange_question_mark.svg.png"
+            width="70" height="70" alt="img" class="foundedimg" id="found4img">
+        <p class="founded" id="found5">Headphones</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/1200px-Orange_question_mark.svg.png"
+            width="70" height="70" alt="img" class="foundedimg" id="found5img">
+        <p class="founded" id="found6">Mug</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/1200px-Orange_question_mark.svg.png"
+            width="70" height="70" alt="img" class="foundedimg" id="found6img">
+    </div>
+
+</body>
+
+</html>

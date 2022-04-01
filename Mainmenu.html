@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anybody:wght@500&display=swap" rel="stylesheet">
+    <title>Menu page</title>
+
+    <style>
+        body {
+            background-image: url("https://papers.co/wallpaper/papers.co-vy14-simple-dark-pattern-background-35-3840x2160-4k-wallpaper.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .menucolor {
+            margin-top: 60px;
+            background-color: #9a031e;
+            border-radius: 30%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            width: 700px;
+            margin: auto;
+
+
+        }
+
+        .menuword h1 {
+            font-size: 80px;
+            text-align: center;
+            color: #e7c080;
+            font-family: 'Kosugi Maru', sans-serif;
+
+        }
+
+        .menuword h2 {
+            font-size: 40px;
+            text-align: center;
+            color: whitesmoke;
+            font-family: 'Kosugi Maru', sans-serif;
+
+        }
+
+        .startorg {
+            padding-top: 50px;
+            text-align: center;
+        }
+
+        .instorg {
+            text-align: center;
+        }
+
+        .btn {
+            border: none;
+            background-color: inherit;
+            padding: 25px 35px;
+            font-size: 30px;
+            cursor: pointer;
+            display: inline-block;
+            font-family: 'Anybody', cursive;
+            border-radius: 15%;
+
+        }
+
+        .start {
+            color: rgb(92, 92, 15);
+        }
+
+        .start:hover {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        .inst {
+            color: rgb(92, 92, 15);
+        }
+
+        .inst:hover {
+            background-color: #04AA6D;
+            color: white;
+        }
+    </style>
+    <script>
+
+        function Game() {
+            location.href = "Game.html";
+        }
+
+        function instruct() {
+            location.href = "instructions.html";
+        }
+        function author() {
+            location.href = "aboutthedevelopers.html";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="menucolor">
+        <div class="menuword">
+            <h1>Anime Aiming</h1>
+            <h2>A Find the Item Game!</h2>
+        </div>
+    </div>
+
+    <div class="startorg">
+        <button class="btn start" onclick="Game()">
+            Start Game
+        </button>
+    </div>
+
+    <div class="instorg">
+        <button class="btn inst" onclick="instruct()">
+            Instructions and Tips
+        </button>
+    </div>
+    <div class="instorg">
+        <button class="btn inst" onclick="author()">
+            About the Authors
+        </button>
+    </div>
+
+</body>
+
+</html>
